@@ -241,36 +241,54 @@ body {font-family: "Lato", sans-serif}
   background: #0f2c3c;
   transform: translateY(-3px);
 }
-
+/* Wrapper to maintain aspect ratio */
 .contact-map-wrapper {
-  width: 100vw;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
-  padding: 0 6rem;
-  box-sizing: border-box;
-}
-
-/* MAP ITSELF */
-.contact-map {
   width: 100%;
-  height: 450px;
-  border: none;
-  border-radius: 12px; 
-  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* MOBILE TWEAK */
-@media (max-width: 600px) {
-  .contact-map {
-    height: 300px;
-    border-radius: 8px;
+/* Make iframe fill the wrapper */
+.contact-map-wrapper .contact-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+/* Base wrapper for map */
+.contact-map-wrapper {
+  width: 100%;
+  max-width: 800px;  /* limits size on large screens */
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Map iframe fills wrapper */
+.contact-map-wrapper .contact-map {
+  width: 100%;
+  height: 450px; /* default height for desktop */
+  border: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-map-wrapper .contact-map {
+    height: 300px; /* smaller height for mobile */
   }
+}
+
+@media (max-width: 480px) {
+  .contact-map-wrapper .contact-map {
+    height: 250px; /* fit smaller phones */
+  }
+}
+
 }
 
 
@@ -294,7 +312,7 @@ body {font-family: "Lato", sans-serif}
     <p class="band-subtitle"><i>I build Web Apps</i></p>
     <p class="band-description">
       I build scalable, powerful, and user-friendly web applications that help businesses thrive in the digital world. 
-      With expertise spanning frontend development, backend engineering, cloud integration, and UI/UX design, we deliver secure, responsive, and optimized applications for enhanced performance.
+      With expertise spanning frontend development, backend engineering, cloud integration, and UI/UX design, I deliver secure, responsive, and optimized applications for enhanced performance.
     </p>
     <div class="band-row">
       <!-- Add any icons, stats, or additional content here -->
