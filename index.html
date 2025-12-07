@@ -11,187 +11,368 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+
+/* General container */
+.band-section {
+  background: #f0f4f8; /* light, calming background */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.band-container {
+  max-width: 800px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Title styling */
+.band-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b4965; /* deep teal-blue */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.band-subtitle {
+  font-size: 1.2rem;
+  color: #527a95; /* lighter teal */
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+/* Description paragraph */
+.band-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* Row inside section */
+.band-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(145deg, #0e0f2b, #21244a, #1c1f3a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+/* Profile Image Wrapper */
+.profile-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffffff60;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Name */
+.name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Subtext */
+.role {
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .name {
+        font-size: 2.2rem;
+    }
+    .role {
+        font-size: 1.1rem;
+    }
+    .profile-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .band-title {
+    font-size: 2rem;
+  }
+  .band-description {
+    font-size: 0.95rem;
+  }
+  .band-container {
+    padding: 30px 20px;
+  }
+}
+
+/* General Section Styling */
+.services-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #1b4965;
+  margin-bottom: 60px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Individual Service Card */
+.service-card a{
+  text-decoration: none;
+}
+.service-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card img:hover {
+  transform: scale(1.05);
+}
+
+.service-content {
+  padding: 25px;
+  text-align: left;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  color: #1b4965;
+  margin-bottom: 10px;
+}
+
+.service-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #527a95;
+  margin-bottom: 15px;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-content button {
+  background: #1b4965;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.service-content button:hover {
+  background: #0f2c3c;
+  transform: translateY(-3px);
+}
+
+.contact-map-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 0 6rem;
+  box-sizing: border-box;
+}
+
+/* MAP ITSELF */
+.contact-map {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 12px; 
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+/* MOBILE TWEAK */
+@media (max-width: 600px) {
+  .contact-map {
+    height: 300px;
+    border-radius: 8px;
+  }
+}
+
+
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">PARTNER</a>
-        <a href="#" class="w3-bar-item w3-button">EXTRAS</a>
-        <a href="#" class="w3-bar-item w3-button">PROMOTE</a>
-      </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
-</div>
-
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MEET US</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px;">
-
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="images/Gray Black Simple Photo Background AI Replace Creativity YouTube Thumbnail (1).png" style="width:100%;">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-52 ">
-   
-      <p><b>In tech, exploration means turning curiosity into innovation!</b></p>   
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="images/Blue Black and Red Simple Photo Background AI Software YouTube Thumbnail.png" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-52 ">
-   
-      <p><b>The digital world rewards those bold enough to explore it</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="images/Blue and White Playful Artificial Intelligence  Technology YouTube Thumbnail (1).png" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-black w3-padding-52 ">
-    
-      <p><b>Every click, every line of code, is an act of exploration</b></p>    
-    </div>
-  </div>
-
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-50" style="max-width:800px" id="band">
-    <h2 class="w3-wide">iCreabot</h2>
-    <p class="w3-opacity"><i>We build web Apps</i></p>
-    <p class="w3-justify"> 
-      We build scalable, powerful and user-friendly web applications that helps businesses thrive in the digital world. 
-      With expertise spanning frontend development, backend engineering, cloud integration, and UI/UX design, we deliver secure, responsive, and optimized applications for enhanced performance. 
-    <div class="w3-row w3-padding-32">
-
-         <div class="w3-third">
-       
-        <img src="images/3.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%;">
-         <p>Oluwasanjo Salisu <br> Backend Engineer</p>
-
-      </div>
-
-      <div class="w3-third">
-        <img src="images/4.png" class="w3-round" alt="Random Name" style="width:100%;"> 
-         <p>Rasheed  <br> Backend Engineer </p>
-      </div>
-
-      <div class="w3-third">
-       
-        <img src="images/1.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%;">
-         <p>Omojola David <br> FrontEnd Engineer</p>
-
-      </div>
-
-    <div class="w3-center">
-         
-         <img src="images/2.png" class="w3-center" alt="Random Name" style="width:100%;">
-         <p>Miracle Quist <br> UI/UX Designer</p>
-      </div>
-      
-     
-    </div>
-  </div>
-
-  <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">WHAT WE DO</h2> <br>
-
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/custom.webp" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Custom Web Application</b></p>
-            <p class="w3-opacity">Mon 8 May 2023</p>
-            <p>Custom web application tailored to meet business needs</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Get App</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/saas1.webp" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>SaaS Platforms</b></p>
-            <p class="w3-opacity">Wed 10 Jan 2024</p>
-            <p>Scalable architectire for growth and future expansion</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Get App</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/ecom.webp" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>E-commerce Platforms</b></p>
-            <p class="w3-opacity">Mon 7 july 2022</p>
-            <p>Seamless, secure and convenient experience</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Get App</button>
-          </div>
-        </div>
-            <div class="w3-third w3-margin-bottom">
-          <img src="images/Screenshot 2025-09-25 173524.png" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>AI integration</b></p>
-            <p class="w3-opacity">Wed 3 Sep 2024</p>
-            <p>integration with third party services and API</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Get App</button>
-          </div>
+    <header class="hero">
+        <div class="profile-wrapper">
+            <img src="images/3.png" alt="Profile Image" class="profile-img">
         </div>
 
-            <div class="w3-third w3-margin-bottom">
-          <img src="images/maint.webp" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Maintenance and Support</b></p>
-            <p class="w3-opacity">Thu 2 Nov 2023</p>
-            <p>Continous support, updates and performance monitoring</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Get App</button>
-          </div>
-        </div>
-            <div class="w3-third w3-margin-bottom">
-          <img src="images/miracle.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>UI/UX Designs</b></p>
-            <p class="w3-opacity">Mon 8 Sep 2025</p>
-            <p><Strong> UI/UX for seamless user experience</Strong></p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Get App</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        <h1 class="name">Salisu Oluwasanjo </h1>
+        <p class="role">Frontend Developer | Backend Developer </p>
+    </header>
 
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Get App</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Request to build a Web Application</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="What category?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <a href="https://wa.me/08058017685"><button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button> </a>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#contact" class="w3-text-blue" onclick="myFunction()">help?</a></p>
-      </div>
+
+<section id="band" class="band-section">
+  <div class="band-container">
+    <h2 class="band-title">iCreabot</h2>
+    <p class="band-subtitle"><i>I build Web Apps</i></p>
+    <p class="band-description">
+      I build scalable, powerful, and user-friendly web applications that help businesses thrive in the digital world. 
+      With expertise spanning frontend development, backend engineering, cloud integration, and UI/UX design, we deliver secure, responsive, and optimized applications for enhanced performance.
+    </p>
+    <div class="band-row">
+      <!-- Add any icons, stats, or additional content here -->
     </div>
   </div>
+</section>
+
+
+<!-- The Services Section -->
+<section id="tour" class="services-section">
+  <div class="container">
+    <h2 class="section-title">WHAT I DO</h2>
+    <div class="services-grid">
+
+      <!-- Service Card -->
+      <div class="service-card">
+        <img src="images/custom.webp" alt="Custom Web Application">
+        <div class="service-content">
+          <h3>Custom Web Application</h3>
+          <span class="service-date">Mon 8 May 2023</span>
+          <p>Custom web applications tailored to meet your business needs.</p>
+          <button onclick="document.getElementById('ticketModal').style.display='block'"><a href="https://wa.me/08058017685">Get App</button></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/saas1.webp" alt="SaaS Platforms">
+        <div class="service-content">
+          <h3>SaaS Platforms</h3>
+          <span class="service-date">Wed 10 Jan 2024</span>
+          <p>Scalable architecture for growth and future expansion.</p>
+          <button onclick="document.getElementById('ticketModal').style.display='block'"><a href="https://wa.me/08058017685">Get App</button></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/ecom.webp" alt="E-commerce Platforms">
+        <div class="service-content">
+          <h3>E-commerce Platforms</h3>
+          <span class="service-date">Mon 7 July 2022</span>
+          <p>Seamless, secure, and convenient e-commerce experience.</p>
+          <button onclick="document.getElementById('ticketModal').style.display='block'"><a href="https://wa.me/08058017685">Get App</button></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/Screenshot 2025-09-25 173524.png" alt="AI Integration">
+        <div class="service-content">
+          <h3>AI Integration</h3>
+          <span class="service-date">Wed 3 Sep 2024</span>
+          <p>Integration with third-party services and APIs.</p>
+          <button onclick="document.getElementById('ticketModal').style.display='block'"><a href="https://wa.me/08058017685">Get App</button></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/maint.webp" alt="Maintenance and Support">
+        <div class="service-content">
+          <h3>Maintenance and Support</h3>
+          <span class="service-date">Thu 2 Nov 2023</span>
+          <p>Continuous support, updates, and performance monitoring.</p>
+          <button onclick="document.getElementById('ticketModal').style.display='block'"><a href="https://wa.me/08058017685">Get App</button></a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/miracle.jpeg" alt="UI/UX Designs">
+        <div class="service-content">
+          <h3>UI/UX Designs</h3>
+          <span class="service-date">Mon 8 Sep 2025</span>
+          <p>UI/UX designs for a seamless user experience.</p>
+          <button onclick="document.getElementById('ticketModal').style.display='block'"><a href="https://wa.me/08058017685">Get App</button></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
@@ -201,7 +382,7 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-col m6 w3-large w3-margin-bottom">
         <i class="fa fa-map-marker" style="width:30px"></i> Lagos, NG<br>
         <i class="fa fa-phone" style="width:30px"></i> Phone: +234 8061646083<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: williamsalisu6@gail.com<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: salisusanjoskillz@gmail.com<br>
       </div>
       <div class="w3-col m6">
         <form action="" name ='submit-to-google-sheet'>
@@ -226,8 +407,18 @@ body {font-family: "Lato", sans-serif}
 <!-- End Page Content -->
 </div>
 
-<!-- Image of location/map -->
-<img src="images/Screenshot 2025-09-30 164642.png" class="w3-image w3-greyscale-min" style="width:100%">
+    <!-- MAP AT THE BOTTOM -->
+    <div class="contact-map-wrapper">
+      <iframe
+        class="contact-map"
+        
+        src="https://www.google.com/maps?q=Medium+Housing+Estate,+Agege+Ijaiye+Road,+Ikeja,+Lagos&hl=en&z=17&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
